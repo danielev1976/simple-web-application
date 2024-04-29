@@ -22,15 +22,9 @@ jobs:
             ls -al
           SCRIPT_AFTER: |
             whoami
-            ls -al
-            echo $RSYNC_STDOUT
-      - name: use node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm install
-      - run: npm run build
-      - run: npm run dev
+            npm install
+            npm run build
+            npm run dev
 
     
       
