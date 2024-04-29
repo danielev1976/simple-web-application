@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: '20'
       - run: npm install
-      - run: npm run test:vite
+      - run: npm run test
     
       
   
