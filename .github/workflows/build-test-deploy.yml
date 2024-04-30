@@ -16,8 +16,8 @@ jobs:
       - name: SSH into EC2 and deploy
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.HOST_DNS }}
-          username: ${{ secrets.USERNAME }}
+          host: ec2-3-224-114-58.compute-1.amazonaws.com
+          username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             git clone https://github.com/danielev1976/simple-web-application.git /app
