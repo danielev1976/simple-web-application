@@ -1,4 +1,4 @@
-name: Deploy Vue.js App to EC2
+name: Deploy to EC2 instance
 
 on:
   push:
@@ -23,8 +23,6 @@ jobs:
             git clone https://github.com/danielev1976/simple-web-application.git /app
             cd /app
             sudo apt update
-            sudo apt install -y nodejs npm
             npm install
             npm run build
-            sudo npm install -g serve
-            serve -s dist
+            pm2 start server.js
