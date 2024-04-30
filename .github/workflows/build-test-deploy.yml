@@ -18,7 +18,31 @@ jobs:
         with:
           host: ec2-3-224-114-58.compute-1.amazonaws.com
           username: ubuntu
-          key: ${{ secrets.EC2_SSH_KEY }}
+          key: MIIEowIBAAKCAQEAr7zgwWhfECr6rDw4c5u34qE/MkXZocIV5Y0QFOx6p3ggk0WR
+gYEdFSlG7jXb6t00Y8vNwUp2I5bX3wk7jiZZd6tDwB/rdpHkZ11RBNVsDyxThxnx
+7ZkNnGqilLwHfhPxRSHVBe16xi85TzGEFYcldF9aRNmafgBfb0211s0nhz1uIGe3
+HfNjUOCD3kzlVMYmYlGX0k4HJYbao+sDhsI0i+nU28NmMrSg5jE/CIsnMYB/pEib
+8l6YaZ3IXa2CVHzcCMxVSa74p3XDerOca+TbDsMnKmnCpP6H27U3rDCJRQhfjw37
+EtPo7uBVRbud3+xQ7fXOeun4f4/OMn5VHMJCVwIDAQABAoIBAQCcCWrOj6uIoYC9
+mSLOk37sfRutuZOJKtliXqPe0DH/rIvP979Aa7G07leKfsvrd8liqrzgWQsYgoDe
+CkaU6rwZozmexzi8qMFSferIDe/KcSMhHApRWspZDd2ZjnJgobhiF64be0a93YRX
+KrIKo1rAP0HZTBT+t7oFC8zfEn18d7Qh5JZoqJH5HUtF5/8tE4tJ4FpixQQtwQgR
+kQrVEib9XhI+PdkNsqPCoonPVnKV6kCXOhj9yFYZ6TKiAH2isoNPPl9UBHE3k2GG
+bAD0j9rAal3O90IMsm3NKv29Psdqqacpo/5dNQO9UbOAbOzkozvLFnUaDhVU/X6O
+JjMtVC5BAoGBAPXTh9b2r60JlSmO6WvYNJk4PkH5FHpKJfeGGsA0rClKi0PD0fUa
+krcCirXIShgR1pTYAWMbS38luXTg1ZsPg2bQQAvxKSijzE4RNGSameWXwiqAK+z3
+UEnGAlm7vgLzVxCM5h3RftOdYb/FGn9BEUftnw4QUq+L1Bymw2uOURInAoGBALcC
+xudEHsEjNr6O1LN5eh5j9tOB7RW1op+eV0l6smXQd8JkQSBgXOTlDpjejTHylYB3
+mszuwUnOkEBl2ybYFI7cju6zAFs17TjMXKaDJb473MmyW6z1PSZbNJeHz2kKDqNL
+fQKHwGgK907mj6g1baNkTO5ugE4n/oNqXKU1rtxRAoGAF5UOT/nkSnZD3/O8wsK/
+8P7rQgryAvVABSnRQSUMav2itIKBjsDY2EOfKOco7HwxmJ/MKkTBDlaBHww+kZyA
+X4mUy1B8QVDNVaPi4c/O+a6ASvF2xUnIYvti2FbhWIkdjhHmNXAWeZh8exgefZyx
+WrQZ8RBxzjNcys7YqmXBszsCgYB3Up4xJ18N+lG1SRcxtaCDtBW4rdvQ7c6MWAb9
+Z7xtWdDbs9Yqr+mhbB9qWKCi0lHboyARQhJQdxfihQaweu5cfz3KMHepAK4c/FHk
+V1oCgLFh6KKRUIyAN7NAoVIAYIhOu+dUAQLYU14P2ZAM0lkb0Ue/pdiOHNF7CZxC
+M5BBIQKBgF/gBKxmDiPb47rs55tyqbwRcaE7PeYV9ShucncJp9KwGSX1J/AheiBE
+Xb3ijTlS77wcRAJYcA0pNhRaT2OaOeldsxjjrKDAEO7mBI2jjetyZtFcMPaha6s+
+SdiP+vaidRyZDk4n5NCnPqr4CEGrlQ7EbWCxmie8LyBhGVO89Zp2
           script: |
             git clone https://github.com/danielev1976/simple-web-application.git /app
             cd /app
