@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     name: Deploy to EC2 on master branch push
     runs-on: ubuntu-latest
 
@@ -18,9 +18,9 @@ jobs:
       - name: SSH into EC2 and deploy
         uses: appleboy/ssh-action@v1.0.3
         with:
-          HOST_DNS: ${{ secrets.HOST_DNS }}
-          USERNAME: ${{ secrets.USERNAME }}
-          EC2_SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+          remote_host: "${{ secrets.HOST_DNS }}"
+          remote_user: ubuntu
+          remote_key: "${{ secrets.EC2_SSH_KEY }}"
           script: |
             npm run install
             npm run build
