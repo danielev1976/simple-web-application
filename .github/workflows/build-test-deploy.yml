@@ -1,4 +1,4 @@
-name: Deploy to EC2
+name: SSH Handshake
 
 on:
   push:
@@ -6,22 +6,15 @@ on:
       - main
 
 jobs:
-  deploy:
+  ssh_handshake:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: SSH into EC2 and deploy
-        uses: appleboy/ssh-action@v1.0.3
+      - name: SSH into EC2 instance
+        uses: appleboy/ssh-action@v0.4.0
         with:
           host: ec2-3-224-114-58.compute-1.amazonaws.com
           username: ubuntu
-          key: ${{ secrets.EC2_SSH_KEY }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}  # Use the SSH private key from GitHub Secrets
           script: |
-            git clone https://github.com/danielev1976/simple-web-application.git /app
-            cd /app
-            npm install
-            npm run build
-            npm run dev
+            echo "SSH connection successful"
