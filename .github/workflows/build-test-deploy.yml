@@ -1,27 +1,27 @@
-name: Push-to-EC2
+name: Deploy to EC2
 
-# Trigger deployment only on push to main branch
 on:
   push:
     branches:
       - main
 
 jobs:
-  build:
-    name: Deploy to EC2 on master branch push
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the files
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: SSH into EC2 and deploy
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: "${{ secrets.HOST_DNS }}"
-          username: ubuntu
-          key: "${{ secrets.EC2_SSH_KEY }}"
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            npm run install
+            git clone https://github.com/danielev1976/simple-web-application.git /app
+            cd /app
+            npm install
             npm run build
             npm run dev
