@@ -18,9 +18,9 @@ jobs:
       - name: SSH into EC2 and deploy
         uses: appleboy/ssh-action@v1.0.3
         with:
-          remote_host: "${{ secrets.HOST_DNS }}"
-          remote_user: ubuntu
-          remote_key: "${{ secrets.EC2_SSH_KEY }}"
+          host: "${{ secrets.HOST_DNS }}"
+          username: ubuntu
+          key: "${{ secrets.EC2_SSH_KEY }}"
           script: |
             npm run install
             npm run build
