@@ -20,8 +20,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            git clone https://github.com/danielev1976/simple-web-application.git /app
-            cd /app
+            sudo mv * /app
             sudo apt update
             npm install
             npm run build
