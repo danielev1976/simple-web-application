@@ -1,0 +1,30 @@
+name: Deploy Vue.js App to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: SSH into EC2 instance
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ec2-3-224-114-58.compute-1.amazonaws.com
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            git clone https://github.com/danielev1976/simple-web-application.git /app
+            cd /app
+            sudo apt update
+            sudo apt install -y nodejs npm
+            npm install
+            npm run build
+            sudo npm install -g serve
+            serve -s dist
