@@ -18,7 +18,8 @@ jobs:
         with:
           host: ec2-3-224-114-58.compute-1.amazonaws.com
           username: ubuntu
-          key: MIIEowIBAAKCAQEAr7zgwWhfECr6rDw4c5u34qE/MkXZocIV5Y0QFOx6p3ggk0WR
+          key: -----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEAr7zgwWhfECr6rDw4c5u34qE/MkXZocIV5Y0QFOx6p3ggk0WR
 gYEdFSlG7jXb6t00Y8vNwUp2I5bX3wk7jiZZd6tDwB/rdpHkZ11RBNVsDyxThxnx
 7ZkNnGqilLwHfhPxRSHVBe16xi85TzGEFYcldF9aRNmafgBfb0211s0nhz1uIGe3
 HfNjUOCD3kzlVMYmYlGX0k4HJYbao+sDhsI0i+nU28NmMrSg5jE/CIsnMYB/pEib
@@ -43,6 +44,7 @@ V1oCgLFh6KKRUIyAN7NAoVIAYIhOu+dUAQLYU14P2ZAM0lkb0Ue/pdiOHNF7CZxC
 M5BBIQKBgF/gBKxmDiPb47rs55tyqbwRcaE7PeYV9ShucncJp9KwGSX1J/AheiBE
 Xb3ijTlS77wcRAJYcA0pNhRaT2OaOeldsxjjrKDAEO7mBI2jjetyZtFcMPaha6s+
 SdiP+vaidRyZDk4n5NCnPqr4CEGrlQ7EbWCxmie8LyBhGVO89Zp2
+-----END RSA PRIVATE KEY-----
           script: |
             git clone https://github.com/danielev1976/simple-web-application.git /app
             cd /app
