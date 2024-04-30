@@ -16,7 +16,7 @@ jobs:
       - name: SSH into EC2 instance
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ec2-3-224-114-58.compute-1.amazonaws.com
+          host: 34.238.75.89
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
